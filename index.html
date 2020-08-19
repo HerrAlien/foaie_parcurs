@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <title>Adaugare kilometraj la foaia de parcurs</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+
+    <link rel="icon" type="image/png" href="images/ae-icon.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="apple-touch-icon" href="images/ae-icon-144.png" />
+    <link rel="icon" type="image/png" href="images/ae-icon-144.png">
+    <link rel="apple-touch-startup-image" href="images/ae-icon-512.png" />
+    <link rel="stylesheet" type="text/css" href="common.css"  />
+
+    <style>
+        input
+        {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+        .page {
+            display: block;
+        }
+
+        .page:not(:target) {
+            display: none;
+        }
+
+        #navigation {
+            bottom: 0;
+            position: fixed;
+        }
+        #navigation div
+        {
+            display: inline-block;
+            width: 40%;
+        }
+    </style>
+
+
+    <script type="application/ld+json">
+
+        {
+        "@context": "http://schema.org/",
+        "@type": "WebApplication",
+        "name": "",
+        "url": "",
+        "sameAs" : "",
+        "alternateName" : "",
+        "description": "",
+        "disambiguatingDescription" : "",
+
+        "screenshot": "",
+
+        "applicationCategory" : "",
+        "applicationSubCategory" : "",
+        "countriesSupported" : "all",
+        "license" : "https://www.gnu.org/licenses/agpl.html",
+        "operatingSystem" : "any",
+        "isAccessibleForFree" : true,
+        "keywords" : "",
+
+        "inLanguage" : "en-US",
+
+        "audience" : {
+        "audienceType" : "me"
+        },
+
+        "author" : {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Alexandru Garofide",
+        "email" : "alexandru.garofide@gmail.com",
+        "givenName" : "Alexandru",
+        "familyName" : "Garofide"
+        },
+
+        "copyrightHolder" : {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Alexandru Garofide",
+        "email" : "alexandru.garofide@gmail.com",
+        "givenName" : "Alexandru",
+        "familyName" : "Garofide"
+        },
+
+        "copyrightYear" : 2020,
+        "softwareVersion" : "1.0",
+        "storageRequirements" : "1MB",
+        "browserRequirements" : "requires HTML5 support"
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="home" class="page">
+    <h1>Input your odometer reading:</h1>
+        <input type="number" id="kilometers" placeholder="[Km reading, at home]"/>
+        <label for="purpose">Firma (F)</label>
+        <label class="switch">
+            <input type="checkbox" id="purpose" class="switchinput" checked="true">
+            <span class="slider round"></span>
+        </label>
+        <label for="purpose">Personal (P)</label>
+        <br/>
+        <input type="button" class="cta" value="Submit" id="submit"/>
+    </div>
+
+    <div id="settings" class="page">
+    <h1>Settings:</h1>
+    </div>
+
+    <div id="navigation">
+        <a href="#home"><div> Home </div></a>
+        <a href="#settings"><div> Settings </div></a>
+    </div>
+    
+</body>
+</html>
+
+<script>
+function gotoUrl(url) {
+    if (window.location.assign)
+        window.location.assign(url);
+    else if (window.location.href)
+        window.location.href = url;
+    else
+        window.location = url;
+}
+gotoUrl("#home");
+</script>
