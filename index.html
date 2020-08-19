@@ -28,8 +28,8 @@
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 50px;
-            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-top: 40px;
         }
         .page {
             display: block;
@@ -42,12 +42,32 @@
         #navigation {
             bottom: 0;
             position: fixed;
+            width: 100%;
+            z-index: 2;
+            border-top: solid 2px #000000;
+            padding-top: 5px;
+            background-color: #d0e0e0;
         }
+        
         #navigation div
         {
             display: inline-block;
-            width: 40%;
+            width: 46%;
+            text-align: center;
+            height: 30px;
+            padding-top: 15px;
+            font-size: 14px;
+            background-color: var(--bg);
+            border: solid 2px #000000;
+            color: #000000;
+            border-radius: 10px;
+            margin-bottom: 5px;
         }
+        
+        .switch{
+            margin-right: 10px;
+        }
+       
     </style>
 
 
@@ -124,13 +144,17 @@
 
     <div id="settings" class="page">
     <h1>Settings:</h1>
+        <input type="text" id="apikey" placeholder="[API Key]"/>
+        <input type="text" id="clientid" placeholder="[Client ID]"/>
+        <input type="text" id="spreadsheetid" placeholder="[Spreadsheet ID]"/>
+        <input type="button" class="cta" value="Submit" id="submit-settings"/>
     </div>
 
     <div id="navigation">
-        <a href="#home"><div> Home </div></a>
-        <a href="#settings"><div> Settings </div></a>
+        <a href="#home"><div class="cta"> Home </div></a>
+        <a href="#settings"><div class="cta"> Settings </div></a>
     </div>
-    
+
 </body>
 </html>
 
