@@ -43,6 +43,9 @@ along with this program.  If not, see https://www.gnu.org/licenses/agpl.html
     <link rel="stylesheet" type="text/css" href="common.css"  />
 
     <style>
+    :root {
+            --input-height: 25px;
+    }
         input
         {
             width: 90%;
@@ -167,12 +170,15 @@ along with this program.  If not, see https://www.gnu.org/licenses/agpl.html
         <input type="text" id="apikey" placeholder="[API Key]"/>
         <input type="text" id="clientid" placeholder="[Client ID]"/>
         <input type="text" id="spreadsheetid" placeholder="[Spreadsheet ID]"/>
-        <input type="button" class="cta" value="Submit" id="submit-settings"/>
+        <input type="button" class="cta" value="Save settings" id="submit-settings"/>
     </div>
 
     <div id="navigation">
         <a href="#home"><div class="cta"> Home </div></a>
         <a href="#settings"><div class="cta"> Settings </div></a>
+    </div>
+
+    <div id="login" class="page">
     </div>
 
 </body>
@@ -187,6 +193,10 @@ function gotoUrl(url) {
     else
         window.location = url;
 }
-gotoUrl("#home");
+
+
+
 </script>
-<script type="text/javascript" src="code.js" async></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script type="text/javascript" src="code.js"></script>
+
